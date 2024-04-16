@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap");
+
+:root {
+  --clr-primary-: hsl(220, 98%, 61%);
+  --clr-pr-vdb: hsl(235, 21%, 11%);
+  --clr-pr-sdb: hsl(235, 24%, 19%);
+  --clr-pr-lgb: hsl(234, 39%, 85%);
+  --clr-pr-dgb: hsl(234, 11%, 52%);
+  --clr-pr-vdgb: hsl(233, 14%, 35%);
+  --clr-pr-vdgbm: hsl(237, 14%, 26%);
+  --font-bold: 700;
+  --font-normal: 400;
+}
+
+* {
+  margin: 0px;
+  box-sizing: border-box;
+  /* outline: 2px solid red; */
+}
+
+body {
+  background-color: var(--clr-pr-vdb);
+  background-image: url(images/bg-desktop-dark.jpg);
+  background-repeat: no-repeat;
+}
+
+.container {
+  margin: 5rem auto;
+  display: grid;
+  gap: 0.5rem;
+  grid-template-columns: auto;
+  width: 50%;
+  padding: 10px;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 18px;
+  color: var(--clr-pr-lgb);
+}
+
+#new_todo {
+  /* outline: none; */
+  background-color: inherit;
+  border: none;
+  color: var(--clr-pr-vdgb);
+  font: inherit;
+  display: block;
+  width: 90%;
+  padding: 5px;
+}
+/* #new_todo:active,
+#new_todo:checked, */
+#new_todo:focus {
+  border: none;
+  outline: none;
+  color: var(--clr-pr-lgb);
+}
+/* CHECKBOX COPIED
+/////////////////////////////////////
+/ */
+
+.checkbox {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 1px solid var(--clr-pr-vdgb);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin-right: 20px;
+}
+.checkbox:hover {
+  border-color: hsl(280, 91%, 63%);
+}
+
+.checkbox__checked {
+  background-image: linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+}
+
+/* CHECKBOX COPIED ///////////////////
+///////////////// */
+.flexgrp {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.heading {
+  justify-content: space-between;
+  text-transform: uppercase;
+  font-size: 25px;
+  font-weight: var(--font-bold);
+  letter-spacing: 0.7rem;
+  align-content: center;
+  align-items: center;
+}
+
+.create__todo {
+  margin: 20px 0;
+  background-color: var(--clr-pr-sdb);
+  padding: 20px;
+  align-items: center;
+  border-radius: 5px;
+}
+
+.todo {
+  background-color: var(--clr-pr-sdb);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.todo__list {
+  display: grid;
+}
+.list__item {
+  padding: 20px;
+  border-bottom: 1px solid var(--clr-pr-vdgb);
+}
+
+.checked {
+  text-decoration: line-through;
+  color: var(--clr-pr-vdgb);
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.footer {
+  justify-content: space-between;
+  padding: 15px;
+  font-size: 14px;
+  color: var(--clr-pr-vdgb);
+  cursor: pointer;
+}
+
+.footer p:hover {
+  color: white;
+}
+
+.pressed__btn {
+  color: hsl(220, 98%, 61%);
+}
+
+.bottomtext {
+  color: var(--clr-pr-vdgbm);
+  justify-self: center;
+  font-size: 14px;
+  margin: 10px;
+}
+.hidden {
+  display: none;
+}
